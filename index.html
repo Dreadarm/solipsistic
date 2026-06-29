@@ -3,121 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
-    <title>Solipsistic</title>
-    <style>
-        /* CSS Styles */
-        body {
-            margin: 0;
-            font-family: 'Metamorphous', serif; /* Using Georgia for the font */
-            font-size: 1em; /* General body font size */
-            color: limegreen;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures the body covers the full viewport height */
-            max-height: 1024px; /* Limits the total height of the webpage */
-            overflow-y: auto; /* Adds a scrollbar if content overflows */
-
-            /* Background image styling */
-            background-image: url('https://images.ctfassets.net/j95d1p8hsuun/30t7KGpFDceIVDEEkELXxW/81eede27d6898942e2558e13a244e25b/new_world_aeternum_pvp_elysianwilds_1920x1080.jpg');
-            background-size: cover; /* Ensures the image covers the entire viewport */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-        }
-        header {
-            position: fixed; /* Sticks the header to the top */
-            top: 0;
-            width: 100%; /* Ensures the header spans the full width of the viewport */
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            padding: 20px 0; /* Adds consistent vertical padding */
-            margin: 0; /* Removes any default margin */
-            text-align: center; /* Centers text horizontally */
-            font-size: 4em; /* Header font size */
-            font-weight: bold;
-            z-index: 1000; /* Ensures the header is above all other content */
-        }
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            margin-top: 115px; /* Prevents overlap with the fixed header */
-        }
-        section {
-            margin: 20px auto;
-            max-width: 600px;
-            text-align: center;
-            font-size: 1.25em;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            margin: 20px auto;
-            border: 1px solid limegreen;
-        }
-        .button-container {
-            flex-grow: 1; /* Allows the container to occupy available space */
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Centers the button horizontally and vertically */
-        }
-        .description-container {
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            color: limegreen;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 1px; /* Rounded corners */
-            font-size: 1.25em; /* Slightly smaller font size for distinction */
-            text-align: left; /* Aligns text for a more polished look */
-            line-height: 1.5; /* Improves readability */
-            border: 1px solid limegreen; /* Adds a subtle border for emphasis */
-        }
-        button {
-            background-color: #5865F2; /* Discord's official blurple */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1em; /* Button font size */
-            text-decoration: none;
-            border-radius: 5px; /* Slightly rounded corners for a modern look */
-        }
-        button:hover {
-            background-color: #4752C4; /* Slightly darker shade on hover */
-        }
-        a {
-            text-decoration: none;
-        }
-        .footer {
-            padding: 20px 0; /* Updated vertical padding */
-            font-size: 0.75em; /* Footer font size */
-            line-height: 1.2; /* Adjust spacing */
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent footer for better visibility */
-        }
-    </style>
+    <meta name="description" content="Solipsistic — a New World company forged in the spirit of the Marauders. For glory, freedom, and fortune in Aeternum.">
+    <meta property="og:title" content="Solipsistic — New World Company">
+    <meta property="og:description" content="For glory, freedom, and fortune. Carve your own legend in Aeternum.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Solipsistic — For Glory, Freedom, and Fortune</title>
 </head>
 <body>
-    <header>SOLIPSISTIC</header>
+    <!-- ================= NAV ================= -->
+    <header class="nav" id="top">
+        <a class="nav__brand" href="#top">
+            <span class="nav__mark">◆</span> SOLIPSISTIC
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+            <a href="#creed">Creed</a>
+            <a href="#about">About</a>
+            <a href="#paths">Paths</a>
+        </nav>
+        <a class="btn btn--sm" href="https://discord.gg/KRS3aNrvk9" target="_blank" rel="noopener">Join</a>
+    </header>
+
     <main>
-        <section>
-            <p>For Glory, Freedom, and Fortune!</p>
-            <p>We are Solipsistic, inspired by the spirit of the Marauders. Join us and make your mark in Aeternum.</p>
-        </section>
-        <div class="button-container">
-            <a href="https://discord.gg/KRS3aNrvk9" target="_blank">
-                <button>Join Now</button>
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="hero__inner">
+                <p class="eyebrow">New World · Aeternum Company</p>
+                <h1 class="hero__title">For Glory,<br>Freedom &amp; Fortune</h1>
+                <p class="hero__sub">
+                    We are <strong>Solipsistic</strong> — forged in the restless spirit of the Marauders.
+                    Take up the banner, stake your claim, and carve your legend into the shores of Aeternum.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn" href="https://discord.gg/KRS3aNrvk9" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3.2a.074.074 0 0 0-.079.037c-.34.607-.719 1.4-.984 2.02a18.27 18.27 0 0 0-5.487 0 12.6 12.6 0 0 0-1-2.02.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C1.066 8.249.36 12.027.706 15.758a.083.083 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.04.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.127c-.598.349-1.22.645-1.873.892a.076.076 0 0 0-.04.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.04.077.077 0 0 0 .032-.055c.5-4.314-.838-8.061-3.549-11.362a.06.06 0 0 0-.031-.028ZM8.02 13.486c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.956-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.418 0 1.334-.956 2.419-2.157 2.419Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.418 0 1.334-.946 2.419-2.157 2.419Z"/></svg>
+                        Join the Company
+                    </a>
+                    <a class="btn btn--ghost" href="#about">Learn More</a>
+                </div>
+            </div>
+            <a class="hero__scroll" href="#creed" aria-label="Scroll to content">
+                <span></span>
             </a>
-        </div>
-        <div class="description-container">
-            <h2>What is Solipsistic?</h2>
-            <p>
-                <strong>Solipsistic</strong> derives from the philosophical concept of solipsism, which holds that the self is the only certainty—an idea that celebrates individuality and self-reliance. Historically, solipsism has been debated among intellectuals as a profound exploration of self-awareness and independence.
-            </p>
-            <p>
-                In the world of Aeternum, Solipsistic is a company built for those who walk alone yet leave a trail that others envy. Our members embody the ideals of strength, freedom, and fortune, blazing their own paths through uncharted territories. Whether you're a lone wolf seeking glory, an explorer unraveling mysteries, or a strategist accumulating riches, Solipsistic is a banner that celebrates your independence.
-            </p>
-        </div>
+        </section>
+
+        <!-- ================= CREED ================= -->
+        <section class="section" id="creed">
+            <div class="section__head">
+                <p class="eyebrow">Our Creed</p>
+                <h2 class="section__title">Three words. One banner.</h2>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7-6.3-4.6L5.7 20.3 8 13.3 2 8.9h7.6z"/></svg>
+                    </div>
+                    <h3>Glory</h3>
+                    <p>We march into war camps and Outpost Rush alike. Every fight is a story; every banner planted, a legend earned.</p>
+                </article>
+                <article class="card">
+                    <div class="card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 1.7.6 3.2 1.6 4.4L12 22l5.4-8.6A7 7 0 0 0 12 2zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+                    </div>
+                    <h3>Freedom</h3>
+                    <p>No rigid roster, no leash. Walk your own road across Aeternum and answer to no one but your own ambition.</p>
+                </article>
+                <article class="card">
+                    <div class="card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4 5 7v10c0 3 3 5 7 5s7-2 7-5V7c0-3-3-5-7-5zm0 3c2.8 0 5 1 5 2s-2.2 2-5 2-5-1-5-2 2.2-2 5-2z"/></svg>
+                    </div>
+                    <h3>Fortune</h3>
+                    <p>From trade routes to crafting empires, we build war chests that outlast every season and fund every campaign.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="section about" id="about">
+            <div class="about__text">
+                <p class="eyebrow">What is Solipsistic?</p>
+                <h2 class="section__title">A creed of self-reliance.</h2>
+                <p>
+                    <strong>Solipsistic</strong> takes its name from solipsism — the philosophy that the self
+                    is the one true certainty. It is a creed of individuality and independence, long debated
+                    by thinkers as the purest study of self-awareness.
+                </p>
+                <p>
+                    In Aeternum, we are a company for those who walk their own road — yet leave a wake that
+                    others can't ignore. Whether you're a lone wolf chasing glory, an explorer unraveling the
+                    island's secrets, or a strategist amassing a war chest, this is a banner that answers to
+                    no one but its own.
+                </p>
+                <a class="btn btn--ghost" href="https://discord.gg/KRS3aNrvk9" target="_blank" rel="noopener">Step into the ranks</a>
+            </div>
+            <ul class="stats" aria-label="Company highlights">
+                <li><span class="stats__num">24/7</span><span class="stats__label">Active Roster</span></li>
+                <li><span class="stats__num">PvP</span><span class="stats__label">War &amp; Outpost Rush</span></li>
+                <li><span class="stats__num">PvE</span><span class="stats__label">Expeditions &amp; Raids</span></li>
+                <li><span class="stats__num">∞</span><span class="stats__label">Trade &amp; Crafting</span></li>
+            </ul>
+        </section>
+
+        <!-- ================= PATHS ================= -->
+        <section class="section" id="paths">
+            <div class="section__head">
+                <p class="eyebrow">Forge Your Path</p>
+                <h2 class="section__title">However you play, there's a place at the table.</h2>
+            </div>
+            <div class="paths">
+                <article class="path">
+                    <h3>War &amp; PvP</h3>
+                    <p>Territory wars, invasions, and Outpost Rush. Hold the line and bleed for the banner.</p>
+                </article>
+                <article class="path">
+                    <h3>Expeditions</h3>
+                    <p>Mutated dungeons and elite chest runs — gear up, dive deep, split the spoils.</p>
+                </article>
+                <article class="path">
+                    <h3>Trade &amp; Economy</h3>
+                    <p>Master the trading post, corner the markets, and bankroll the company's campaigns.</p>
+                </article>
+                <article class="path">
+                    <h3>Exploration</h3>
+                    <p>Chart the unknown corners of Aeternum and bring back the secrets others miss.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= CTA BANNER ================= -->
+        <section class="cta-banner">
+            <h2 class="cta-banner__title">Aeternum is waiting.</h2>
+            <p>Take up the banner and write your own legend with Solipsistic.</p>
+            <a class="btn" href="https://discord.gg/KRS3aNrvk9" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3.2a.074.074 0 0 0-.079.037c-.34.607-.719 1.4-.984 2.02a18.27 18.27 0 0 0-5.487 0 12.6 12.6 0 0 0-1-2.02.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C1.066 8.249.36 12.027.706 15.758a.083.083 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.04.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.127c-.598.349-1.22.645-1.873.892a.076.076 0 0 0-.04.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.04.077.077 0 0 0 .032-.055c.5-4.314-.838-8.061-3.549-11.362a.06.06 0 0 0-.031-.028ZM8.02 13.486c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.956-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.418 0 1.334-.956 2.419-2.157 2.419Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.176 1.094 2.157 2.418 0 1.334-.946 2.419-2.157 2.419Z"/></svg>
+                Join Now
+            </a>
+        </section>
     </main>
-    <footer class="footer">© 2025 Solipsistic. Inspired by New World and the Marauders.</footer>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer__brand">
+            <span class="nav__mark">◆</span> SOLIPSISTIC
+        </div>
+        <p class="footer__note">© 2025 Solipsistic · Inspired by New World and the spirit of the Marauders.</p>
+        <a class="footer__link" href="https://discord.gg/KRS3aNrvk9" target="_blank" rel="noopener">Discord</a>
+    </footer>
 </body>
 </html>
